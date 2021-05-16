@@ -3,8 +3,8 @@ import { GlobalContext } from '../context/GlobalContext';
 
 export const AddTransaction = () => {
 
-    const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [ text, setText ] = useState('');
+    const [ amount, setAmount ] = useState(0);
 
     const { addTransaction } = useContext(GlobalContext);
 
@@ -33,7 +33,7 @@ export const AddTransaction = () => {
                     >Amount <br />
                     (negative - expense, positive - income)</label
                 >
-                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+                <input type="number" value={amount} onChange={ (e) => setAmount(e.target.value) } placeholder="Enter amount..." />
                 </div>
                 <button className="btn">Add transaction</button>
             </form>
